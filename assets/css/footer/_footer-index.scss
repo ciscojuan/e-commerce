@@ -1,0 +1,13 @@
+.footer{
+    width: 100%;
+    height: auto;
+    background-color: aliceblue;
+    &__container{
+        padding: 1rem 5rem;   
+        text-align: center; 
+        background-color: white;    
+        .footer--text{
+            font-size: 1.5rem;
+        }
+    }
+}

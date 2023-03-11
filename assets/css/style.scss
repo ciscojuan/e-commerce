@@ -1,0 +1,15 @@
+@use 'header/header-index';
+@use 'gallery/gallery-index';
+@use 'products/products-index';
+@use 'about/about-index';
+@use 'footer/footer-index';
+
+*{
+    margin: 0;
+    padding: 0; 
+    .container{
+        width: 100%;
+        height: 100%;
+        
+    }
+}

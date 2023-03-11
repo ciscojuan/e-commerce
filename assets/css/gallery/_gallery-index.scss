@@ -1,0 +1,34 @@
+@use '../header/header-index'; 
+.gallery{
+    width: 100%;
+    height: 30rem;
+    &__banner{
+        background-image: url('/assets/images/banner-image.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 30rem;
+        position: relative;
+    }
+    &__info{
+        width: 100%;
+        height: 10rem;
+        position: absolute;
+        left: 50%;
+        top: 48%;
+        color: white;
+        transform: translate(-50%, -50%);
+        text-shadow: 0 4px 4px rgb(0 0 0 / 75%);
+        font-size: 3rem;
+        .gallery--text{
+            padding-left: 5rem
+        }
+        &--button{
+            @extend .header__login--button;
+            width: 10rem;
+            font-size: 18px;
+            margin-left: 5rem;
+        }
+    }
+}
