@@ -1,9 +1,10 @@
 .header {
+  width: 100%;
+  height: 5rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 30px 0px;
-  gap: 15rem;
+  padding: 30px 0;
   background: #67E0A3;
   border-bottom: 1px solid;
 }
@@ -43,26 +44,60 @@
   width: 15rem;
   height: 4rem;
 }
-.header__login--button, .gallery__info--button {
+.header__login--button, .about__container .about__contact .send, .gallery__info--button {
   width: 100%;
   padding: 1rem;
   border-radius: 5px;
   cursor: pointer;
-  background-color: #BDFFFD;
+  background-color: #AFF9C9;
   border: 4px solid rgb(8, 8, 80);
   color: rgb(8, 8, 80);
   font-size: 20px;
 }
 
+@media screen and (max-width: 1200px) {
+  .header__search {
+    width: 25rem;
+  }
+  .header__search--input {
+    background-position: 350px;
+  }
+  .header__login--button, .about__container .about__contact .send, .gallery__info--button {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .header {
+    height: 10rem;
+    flex-direction: column;
+  }
+  .header__logo {
+    display: none;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header__search {
+    width: auto;
+  }
+  .header__search--input {
+    background-position: 350px;
+  }
+  .header__login--button, .about__container .about__contact .send, .gallery__info--button {
+    width: 80%;
+  }
+}
 .gallery {
   width: 100%;
   height: 30rem;
 }
 .gallery__banner {
-  background: url("../../images/banner-image.png") center/cover no-repeat;
-  max-width: 100%;
-  height: auto;
+  width: 100%;
+  height: 100%;
   position: relative;
+  background-image: url("../images/banner-image.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .gallery__info {
   width: 100%;
@@ -84,54 +119,197 @@
   margin-left: 5rem;
 }
 
+@media screen and (max-width: 768px) {
+  .gallery__info {
+    left: 46%;
+    top: 60%;
+  }
+  .gallery__info .gallery--text {
+    font-size: 3rem;
+  }
+  .gallery__info--button {
+    width: 9rem;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .gallery {
+    height: 20rem;
+  }
+  .gallery__info {
+    left: 42%;
+    top: 42%;
+  }
+  .gallery__info .gallery--text {
+    font-size: 1.7rem;
+  }
+  .gallery__info--button {
+    width: 7rem;
+    font-size: 11px;
+  }
+}
 .products {
   width: 100%;
   height: 100%;
-  display: flex;
-  justify-content: center;
-  padding: 5rem 0;
-  background-color: #7CF0BD;
+  background-color: #aff9c9;
+  margin: 0 auto;
 }
 .products__container {
-  width: 90%;
-  height: 100%;
-  gap: 30px;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
-  flex-wrap: wrap;
-  background-color: #7CF0BD;
+  width: 100%;
+  height: 100%;
+  padding: 2rem 0;
 }
-.products__container--product {
-  padding: 10px;
-  width: 300px;
-  height: 300px;
-  border-radius: 1rem;
-  text-align: center;
-  transition: 0.3s;
+.products__container .star-wars__container {
+  width: 100%;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 2rem;
+  margin-left: 4rem;
 }
-.products__container--product .product__thumbnail {
-  width: 250px;
-  height: 250px;
-  border-radius: 1rem;
-  image-rendering: auto;
+.products__container .star-wars__container .star__wars--nav {
+  width: 100%;
+  height: 2rem;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
 }
-.products__container--product .product__title {
-  font-size: 1rem;
+.products__container .star-wars__container .star-wars__products {
+  display: grid;
+  grid-template-columns: 250px 250px 250px 250px 250px 250px;
+  gap: 30px;
+}
+.products__container .star-wars__container .star-wars__products .star-wars__product {
+  width: 200px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.products__container .star-wars__container .star-wars__products .star-wars__product .star-wars__thumbnail {
+  width: 150px;
+  height: 150px;
 }
 
+@media screen and (max-width: 1200px) {
+  .products__container .star-wars__container .star__wars--nav {
+    width: 80%;
+    height: 2rem;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .products__container .star-wars__container .star-wars__products {
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    justify-content: space-around;
+  }
+  .products__container .star-wars__container .star-wars__products .star-wars__product {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .products__container .star-wars__container .star-wars__products .star-wars__product .star-wars__thumbnail {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .products {
+    width: 100%;
+    height: 100%;
+    background-color: #aff9c9;
+    margin: 0 auto;
+  }
+  .products__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0;
+  }
+  .products__container .star-wars__container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    margin-left: 4rem;
+  }
+  .products__container .star-wars__container .star__wars--nav {
+    width: 100%;
+    height: 2rem;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+  .products__container .star-wars__container .star-wars__products {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px;
+  }
+  .products__container .star-wars__container .star-wars__products .star-wars__product {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .products__container .star-wars__container .star-wars__products .star-wars__product .star-wars__thumbnail {
+    width: 150px;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .products {
+    width: 100%;
+    height: 100%;
+    background-color: #aff9c9;
+    margin: 0 auto;
+  }
+  .products__container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 2rem 0;
+  }
+  .products__container .star-wars__container {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .products__container .star-wars__container .star__wars--nav {
+    width: auto;
+    height: 2rem;
+    padding: 1rem 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
 .about {
   width: 100%;
-  height: 25rem;
+  height: 100%;
+  background-color: #bdfffd;
 }
 .about__container {
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  background-color: #BDFFFD;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  padding: 0 5px;
 }
 .about__container .nav--menu {
   list-style: none;
@@ -147,36 +325,97 @@
   color: #000;
 }
 .about__container .about__contact {
-  width: 30rem;
   height: 80%;
   border-radius: 25px;
-}
-.about__container .about__contact .about__container {
-  background-color: #7CF0BD;
+  width: 395px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  border-radius: 25px;
+  text-align: center;
+  align-items: center;
+  padding: 20px 20px 30px 20px;
+  border: 4px solid #030323;
+  background: rgba(5, 7, 12, 0.4);
 }
-.about__container .about__contact .about__container .nombre--input, .about__container .about__contact .about__container .decripcion--input {
+.about__container .about__contact .nombre--input,
+.about__container .about__contact .decripcion--input {
   width: 80%;
   margin-bottom: 10px;
-  height: 20%;
-  border-radius: 10px;
-  font-size: 1.5rem;
+  height: 45px;
+  border-radius: 4px;
+  font-size: 1.2rem;
   border: none;
+  background: rgb(175, 249, 201);
   outline: none;
   padding-left: 15px;
 }
-.about__container .about__contact .about__container .send {
-  background-color: #BDFFFD;
+.about__container .about__contact .decripcion--input {
+  height: 80px;
+}
+.about__container .about__contact .nombre--input:focus,
+.about__container .about__contact .decripcion--input:focus {
+  border: 4px solid #030323;
+}
+.about__container .about__contact .nombre--input:invalid {
+  border: 4px solid red;
+  animation: shake 0.2s 2;
+}
+@keyframes shake {
+  25% {
+    translate: 6px 0;
+  }
+  50% {
+    translate: -6px 0;
+  }
+  75% {
+    translate: 6px 0;
+  }
+}
+.about__container .about__contact .send {
   padding: 5px;
   width: 80%;
   height: 50px;
   border-radius: 10px;
-  border: none;
+  font-size: 20px;
 }
 
+@media screen and (max-width: 1024px) {
+  .about__container .about__contact {
+    width: auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .about__container .about__contact {
+    width: 25rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about {
+    height: 100%;
+  }
+  .about__container {
+    flex-direction: column;
+  }
+  .about__container .about__contact .about__container {
+    margin: 2rem 0;
+  }
+  .about__container .about__contact .about__container .nombre--input,
+  .about__container .about__contact .about__container .decripcion--input {
+    height: 15%;
+    font-size: 1.1rem;
+  }
+}
+@media screen and (max-width: 480px) {
+  .about__container {
+    padding: 1rem 0;
+  }
+  .about__container .about__brand {
+    padding: 1rem 0;
+  }
+  .about__container .about__contact {
+    width: auto;
+  }
+}
 .footer {
   width: 100%;
   height: auto;

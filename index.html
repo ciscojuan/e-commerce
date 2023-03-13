@@ -9,7 +9,7 @@
   </head>
   <body>
     <div class="container">
-      <div class="header">
+      <section class="header">
         <div class="header__logo"></div>
         <div class="header__search">
           <input
@@ -23,8 +23,8 @@
         <div class="header__login">
           <button class="header__login--button">login</button>
         </div>
-      </div>
-      <div class="gallery">
+      </section>
+      <section class="gallery">
         <div class="gallery__banner"></div>
         <div class="gallery__info">
           <h3 class="gallery--text">Febrero Promocional</h3>
@@ -34,44 +34,73 @@
 
           <button class="gallery__info--button">Ver Productos</button>
         </div>
-      </div>
-      <div class="products">
+      </section>
+      <section class="products">
         <div class="products__container">
+          <div class="star-wars__container">
+            <div class="star__wars--nav">
+              <h3>Star Wars</h3>
+              <h5>Ver Todo</h5>
+            </div>
+            <div class="star-wars__products">
+
+            </div>
+          </div>
+        </div>
           <div class="loading"><span>Loading...</span></div>
         </div>
-      </div>
-      <div class="about">
+      </section>
+
+      <section class="about">
         <div class="about__container">
           <div class="about__brand">
-            <img src="/assets/images/logo.svg" type="">
-            <img src="/assets/images/alura.svg" type="">
-            <img src="/assets/images/geek.svg" type="">
+            <img src="/assets/images/logo.svg" alt="AluraGeeks" />
+            <img src="/assets/images/alura.svg" alt="AluraGeeks" />
+            <img src="/assets/images/geek.svg" alt="AluraGeeks" />
           </div>
-            <ul class="nav--menu">
-              <li class="nav--link"><a href="#" class="anchor">Quienes Somos</a></li>
-              <li class="nav--link"><a href="#" class="anchor">Politica de Privacidad</a></li>
-              <li class="nav--link"><a href="#" class="anchor">Programa de Filidad</a></li>
-              <li class="nav--link"><a href="#" class="anchor">Nuestras Tiendas</a></li>
-              <li class="nav--link"><a href="#" class="anchor">Quiero ser Benediciado</a></li>
-              <li class="nav--link"><a href="#" class="anchor">Anuncie Aqui</a></li>
-            </ul>
+          <ul class="nav--menu">
+            <li class="nav--link">
+              <a href="#" class="anchor">Quienes Somos</a>
+            </li>
+            <li class="nav--link">
+              <a href="#" class="anchor">Politica de Privacidad</a>
+            </li>
+            <li class="nav--link">
+              <a href="#" class="anchor">Programa de Filidad</a>
+            </li>
+            <li class="nav--link">
+              <a href="#" class="anchor">Nuestras Tiendas</a>
+            </li>
+            <li class="nav--link">
+              <a href="#" class="anchor">Quiero ser Benediciado</a>
+            </li>
+            <li class="nav--link">
+              <a href="#" class="anchor">Anuncie Aqui</a>
+            </li>
+          </ul>
           <div class="about__contact">
-            <div class="about__container">
-              <input type="text" class="nombre--input" placeholder="Escribe tu nombre">
-              <textarea class="decripcion--input"  cols="30" rows="10" placeholder="Escribre un mensaje"></textarea>
-              <button class="send">Enviar</button>
-            </div>
+            <input
+              type="text"
+              class="nombre--input"
+              placeholder="Escribe tu nombre"
+              pattern="[a-z]*"
+            />
 
+            <input type="text-area""
+              class="decripcion--input"
+              placeholder="Escribre un mensaje"
+            >
+            <button class="send">Enviar</button>
           </div>
         </div>
-      </div>
-      <div class="footer">
+      </section>
+      <section class="footer">
         <div class="footer__container">
           <p class="footer--text">Desarrollado por COD_</p>
           <p class="footer--text">SOC Security Analyst</p>
           <p class="footer--text">2023</p>
         </div>
-      </div>
+      </section>
     </div>
 
     <script src="assets/js/products.js"></script>

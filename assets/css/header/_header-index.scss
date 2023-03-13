@@ -1,10 +1,11 @@
 $font-color: rgb(8, 8, 80);
 .header {
+  width: 100%;
+  height: 5rem;
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 30px 0px;
-  gap: 15rem;
+  padding: 30px 0;
   background: #67E0A3;
   border-bottom: 1px solid;
 
@@ -48,10 +49,51 @@ $font-color: rgb(8, 8, 80);
       padding: 1rem;
       border-radius: 5px;
       cursor: pointer;
-      background-color: #BDFFFD;
+      background-color: #AFF9C9;
       border: 4px solid $font-color;
       color: $font-color;
       font-size: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+    .header{
+      &__search{
+        width: 25rem;
+        &--input{
+          background-position: 350px;
+        }
+      }
+      &__login{
+        &--button{
+          width: 80%;
+        }
+      }
+    }
+}
+
+@media screen and (max-width: 768px) {
+  .header{
+    height:10rem;
+    flex-direction:column;
+    &__logo{
+        display: none;
+      }
+  }
+}
+@media screen and (max-width: 480px){
+  .header{
+    &__search{
+      width: auto;
+      &--input{
+        background-position: 350px;
+      }
+    }
+    &__login{
+      &--button{
+        width: 80%;
+      }
     }
   }
 }
