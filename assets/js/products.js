@@ -7,7 +7,7 @@ const hash = "317049953472af01ff9dd92b48639551";
 const apiKey = "c13d19c05231a50bcea5c844f09b960e";
 
 const url = `https://gateway.marvel.com:443/v1/public/comics?limit=6&ts=${ts}&apikey=${apiKey}&hash=${hash}`;
-const starWars = document.querySelector('.star-wars__products');
+const starWars = document.querySelector('.marvel');
 console.log(starWars)
 var comics = [];
 
@@ -31,11 +31,13 @@ const getComic = () =>{
     comics.map((comic, i) => {
 
         let content = ` 
-        <div class="star-wars__product">
-            <img src="${comic.thumbnail.path}.${comic.thumbnail.extension}" alt="${comic.title}" class="star-wars__thumbnail"></img>
-            <h4 clas="pduct--text">${comic.title}</h4>
-            <h5 clas="pduct--text">${comic.prices[0].price}</h5>
-            <p clas="pduct--text"><a href="">Ver Producto</a></p>
+        <div class="product">
+            <img src="${comic.thumbnail.path}.${comic.thumbnail.extension}" alt="${comic.title}" class="product__thumbnail"></img>
+            <div class="product__details">
+                <h4 clas="product--text">${comic.title}</h4>
+                <h5 clas="product--text">${comic.prices[0].price}</h5>
+                <p clas="product--text"><a href="">Ver Producto</a></p>
+            </div>
         </div>`
         starWars.innerHTML += content
         document.querySelector('.loading').style.display = 'none'

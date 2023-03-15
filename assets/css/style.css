@@ -119,6 +119,14 @@
   margin-left: 5rem;
 }
 
+.container__login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
 @media screen and (max-width: 768px) {
   .gallery__info {
     left: 46%;
@@ -151,47 +159,73 @@
 .products {
   width: 100%;
   height: 100%;
-  background-color: #aff9c9;
+  background-color: #ffffff;
   margin: 0 auto;
 }
-.products__container {
+.products .main__container {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
   width: 100%;
   height: 100%;
   padding: 2rem 0;
+  gap: 40px;
 }
-.products__container .star-wars__container {
-  width: 100%;
+.products .main__container .products__container {
+  width: 80%;
   height: 100%;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
   padding: 0 2rem;
-  margin-left: 4rem;
+  /* margin-left: 4rem; */
 }
-.products__container .star-wars__container .star__wars--nav {
+.products .main__container .products__container .products__container--nav {
   width: 100%;
   height: 2rem;
   padding: 1rem 0;
   display: flex;
+  font-size: 1.5rem;
   justify-content: space-between;
   align-items: baseline;
 }
-.products__container .star-wars__container .star-wars__products {
-  display: grid;
-  grid-template-columns: 250px 250px 250px 250px 250px 250px;
-  gap: 30px;
-}
-.products__container .star-wars__container .star-wars__products .star-wars__product {
-  width: 200px;
-  height: 200px;
+.products .main__container .products__container .row__container--products {
   display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+.products .main__container .products__container .row__container--products .row__container--products:hover {
+  transform: translateY(-10px);
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
+}
+.products .main__container .products__container .row__container--products .product {
+  width: 250px;
+  height: 250px;
+  display: flex;
+  border: 1px solid #000;
   flex-direction: column;
   justify-content: center;
 }
-.products__container .star-wars__container .star-wars__products .star-wars__product .star-wars__thumbnail {
-  width: 150px;
-  height: 150px;
+.products .main__container .products__container .row__container--products .product .product__thumbnail {
+  width: 250px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.products .main__container .products__container .row__container--products .product .product__details {
+  text-align: left;
+}
+.products .main__container .btn-add {
+  display: none;
+  width: 8rem;
+  height: 1.5rem;
+  padding: 1rem;
+  background-color: #aff9c9;
+  border-radius: 5px;
+  border: 4px solid #6b987e;
 }
 
 @media screen and (max-width: 1200px) {
@@ -299,8 +333,8 @@
 }
 .about {
   width: 100%;
-  height: 100%;
-  background-color: #bdfffd;
+  height: 25rem;
+  color: #fff;
 }
 .about__container {
   width: 100%;
@@ -325,7 +359,7 @@
   color: #000;
 }
 .about__container .about__contact {
-  height: 80%;
+  height: 65%;
   border-radius: 25px;
   width: 395px;
   display: flex;
@@ -334,7 +368,6 @@
   text-align: center;
   align-items: center;
   padding: 20px 20px 30px 20px;
-  border: 4px solid #030323;
   background: rgba(5, 7, 12, 0.4);
 }
 .about__container .about__contact .nombre--input,
@@ -430,6 +463,42 @@
   font-size: 1.5rem;
 }
 
+.container .gallery .gallery__banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .gallery .gallery__banner .container__login {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 30px;
+  width: 400px;
+  height: 400px;
+  background: rgba(5, 7, 12, 0.4);
+}
+.container .gallery .gallery__banner .container__login .login__title {
+  font-size: 25px;
+  color: white;
+}
+.container .gallery .gallery__banner .container__login .input-login {
+  width: 80%;
+  height: 4rem;
+  outline: none;
+  border-radius: 5px;
+  font-size: 25px;
+  padding-left: 15px;
+  border: 4px solid green;
+}
+.container .gallery .gallery__banner .container__login .btn-login {
+  width: 80%;
+  margin-left: 0;
+}
+.container .about .about__container {
+  background: #6b987e;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -437,4 +506,5 @@
 * .container {
   width: 100%;
   height: 100%;
+  background: #3C6255;
 }/*# sourceMappingURL=style.css.map */
