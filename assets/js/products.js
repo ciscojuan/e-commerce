@@ -34,9 +34,9 @@ const getComic = () =>{
         <div class="product">
             <img src="${comic.thumbnail.path}.${comic.thumbnail.extension}" alt="${comic.title}" class="product__thumbnail"></img>
             <div class="product__details">
-                <h4 clas="product--text">${comic.title}</h4>
-                <h5 clas="product--text">${comic.prices[0].price}</h5>
-                <p clas="product--text"><a href="">Ver Producto</a></p>
+                <h4 >${comic.title}</h4>
+                <h5 >${comic.prices[0].price}</h5>
+                <p class="btn-showProduct"><a href="" class="anchor">Ver Producto</a></p>
             </div>
         </div>`
         starWars.innerHTML += content

@@ -54,6 +54,9 @@
   color: rgb(8, 8, 80);
   font-size: 20px;
 }
+.header__login .out {
+  display: none;
+}
 
 @media screen and (max-width: 1200px) {
   .header__search {
@@ -103,8 +106,8 @@
   width: 100%;
   height: 10rem;
   position: absolute;
-  left: 50%;
-  top: 48%;
+  left: 54%;
+  top: 40%;
   color: white;
   transform: translate(-50%, -50%);
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.75);
@@ -129,8 +132,8 @@
 
 @media screen and (max-width: 768px) {
   .gallery__info {
-    left: 46%;
-    top: 60%;
+    left: 49%;
+    top: 48%;
   }
   .gallery__info .gallery--text {
     font-size: 3rem;
@@ -202,21 +205,35 @@
   box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.2);
 }
 .products .main__container .products__container .row__container--products .product {
-  width: 250px;
-  height: 250px;
+  width: 300px;
+  height: 400px;
   display: flex;
-  border: 1px solid #000;
+  background-color: #f4f4f4;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 1px 1px 15px rgba(123, 121, 123, 0.733);
 }
 .products .main__container .products__container .row__container--products .product .product__thumbnail {
   width: 250px;
-  height: 300px;
+  height: 200px;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 10px;
 }
 .products .main__container .products__container .row__container--products .product .product__details {
-  text-align: left;
+  font-size: 1.3rem;
+  text-align: center;
+}
+.products .main__container .products__container .row__container--products .product .product__details .btn-showProduct {
+  border: 2px solid #ccc;
+  padding: 5px;
+}
+.products .main__container .products__container .row__container--products .product .product__details .btn-showProduct .anchor {
+  text-decoration: none;
+  color: black;
 }
 .products .main__container .btn-add {
   display: none;
@@ -258,82 +275,96 @@
   .products {
     width: 100%;
     height: 100%;
-    background-color: #aff9c9;
     margin: 0 auto;
   }
-  .products__container {
+  .products .main__container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 2rem 0;
   }
-  .products__container .star-wars__container {
+  .products .main__container .products__container {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    padding: 0 2rem;
-    margin-left: 4rem;
+    padding: 0;
   }
-  .products__container .star-wars__container .star__wars--nav {
-    width: 100%;
+  .products .main__container .products__container--nav {
+    width: 80%;
     height: 2rem;
-    padding: 1rem 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: baseline;
   }
-  .products__container .star-wars__container .star-wars__products {
+  .products .main__container .products__container .row__container--products {
     display: grid;
     grid-template-columns: auto auto;
-    gap: 30px;
   }
-  .products__container .star-wars__container .star-wars__products .star-wars__product {
-    width: 200px;
-    height: 200px;
+  .products .main__container .products__container .row__container--products .product {
+    width: 300px;
+    height: 400px;
     display: flex;
+    justify-content: space-around;
     flex-direction: column;
-    justify-content: center;
   }
-  .products__container .star-wars__container .star-wars__products .star-wars__product .star-wars__thumbnail {
-    width: 150px;
-    height: 150px;
+  .products .main__container .products__container .row__container--products .product__thumbnail {
+    width: 100px;
+    height: 50px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
   }
 }
 @media screen and (max-width: 480px) {
   .products {
     width: 100%;
     height: 100%;
-    background-color: #aff9c9;
     margin: 0 auto;
   }
-  .products__container {
+  .products .main__container {
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 100%;
     height: 100%;
-    padding: 2rem 0;
   }
-  .products__container .star-wars__container {
+  .products .main__container .products__container {
     width: 100%;
     height: 100%;
     margin: 0 auto;
-    padding: 0 2rem;
+    padding: 0;
   }
-  .products__container .star-wars__container .star__wars--nav {
-    width: auto;
+  .products .main__container .products__container--nav {
+    width: 80%;
     height: 2rem;
-    padding: 1rem 0;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: baseline;
+  }
+  .products .main__container .products__container .row__container--products {
+    display: grid;
+    grid-template-columns: auto auto;
+  }
+  .products .main__container .products__container .row__container--products .product {
+    width: 200px;
+    height: 300px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+  }
+  .products .main__container .products__container .row__container--products .product .product__thumbnail {
+    width: 150px;
+    height: 150px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
   }
 }
 .about {
   width: 100%;
   height: 25rem;
+  background-color: #67e0a3;
   color: #fff;
 }
 .about__container {
@@ -495,9 +526,6 @@
   width: 80%;
   margin-left: 0;
 }
-.container .about .about__container {
-  background: #6b987e;
-}
 
 * {
   margin: 0;
@@ -506,5 +534,5 @@
 * .container {
   width: 100%;
   height: 100%;
-  background: #3C6255;
+  background-color: #f4f4f4;
 }/*# sourceMappingURL=style.css.map */
