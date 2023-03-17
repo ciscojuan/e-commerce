@@ -41,23 +41,42 @@
 
           <div class="products__container">
             <div class="products__container--nav">
-              <h3>Marvel Comics</h3>
+              <h3>MONITORES</h3>
               <h5>Ver Todo</h5>
             </div>
-            <div class="row__container--products marvel">
+            <div class="row__container--products" data-keyboard>
             </div>
           </div>
 
           <div class="products__container">
             <div class="products__container--nav">
-              <h3>Films</h3>
+              <h3>MOUSES</h3>
               <h5>Ver Todo</h5>
             </div>
-            <div class="row__container--products films">
+            <div class="row__container--products" data-mouse>
             </div>
           </div>
+
+          <div class="products__container">
+            <div class="products__container--nav">
+              <h3>LAPTOPS</h3>
+              <h5><a href="views/getProducts.html" class="hyperlink">Ver Todo</a> </h5>
+            </div>
+            <div class="row__container--products" data-laptop>
+            </div>
+          </div>
+
+          <div class="products__container">
+            <div class="products__container--nav">
+              <h3>MONITORES</h3>
+              <h5><a href="views/getProducts.html" class="hyperlink">Ver Todo</a> </h5>
+            </div>
+            <div class="row__container--products" data-monitor>
+            </div>
+          </div>
+
           <div class="loading"><span>Loading...</span></div>
-          <div class="btn-login btn-add">Agregar Producto</div>
+         <a href="views/addProduct.html" style="text-decoration: none; color:black"> <div class="btn-login btn-add">Agregar Producto</div></a>
         </div>
 
       </section>
@@ -113,7 +132,7 @@
       </section>
     </div>
 <script src="assets/js/index.js"></script>
-    <script src="assets/js/products.js"></script>
-    <script src="assets/js/movies-products.js"></script>
+    <script type="module" src="controllers/getProducts.controller.js"></script>
+
   </body>
 </html>

@@ -35,7 +35,7 @@
       .row__container--products{
         display: flex;
         flex-wrap: wrap;
-        gap: 30px;
+        gap: 15px;
         justify-content: center;
         overflow: hidden;
         transition: all 0.3s ease;
@@ -48,7 +48,7 @@
           width: 300px;
           height: 400px;
           display: flex;
-          background-color: #f4f4f4;
+          background-color: #fff;
           flex-direction: column;
           justify-content: space-around;
           align-items: center;
@@ -66,6 +66,8 @@
             font-size: 1.3rem;
             text-align: center;
               .btn-showProduct{
+                width: 80%;
+                margin:0 auto;
                 border: 2px solid #ccc;
                 padding: 5px;
                 .anchor{
