@@ -1,11 +1,11 @@
+@use './addProduct/addProduct-index';
+@use './getProduct/getProduct-index';
+@use './login/login-index';
 @use 'header/header-index';
 @use 'gallery/gallery-index';
 @use 'products/products-index';
 @use 'about/about-index';
 @use 'footer/footer-index';
-@use './login/login-index';
-@use './addProduct/addProduct-index';
-@use './getProduct/getProduct-index';
 
 *{
     margin: 0;
@@ -18,6 +18,8 @@
     .container{
         width: 100%;
         height: 100%;
-        background-color: #f4f4f4;
     }
+}
+.text-center{
+    text-align: center;
 }
