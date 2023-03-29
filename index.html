@@ -12,12 +12,13 @@
       <section class="header">
         <div class="header__logo"></div>
         <div class="header__search">
-          <input
-            type="search"
-            name="search"
-            placeholder="Search"
-            class="header__search--input"
-          />
+            <input
+              type="search"
+              name="search"
+              placeholder="Search"
+              class="header__search--input"
+              data-string
+            />
           <i class="fas fa-search"></i>
         </div>
         <div class="header__login">
@@ -33,13 +34,17 @@
             Productos Seleccionados con 33% de descuento
           </h4>
 
-          <button class="gallery__info--button">Ver Productos</button>
+          <button class="gallery__info--button"> <a href="views/getProducts.html">Ver Productos</a></button>
         </div>
       </section>
       <section class="products">
         <div class="main__container">
 
-          <div class="products__container">
+          <div class="row__container--products" >
+            <div class="pruduct" data-search></div>
+          </div>
+
+          <div class="products__container b ">
             <div class="products__container--nav">
               <h3>MONITORES</h3>
               <h5>Ver Todo</h5>
@@ -48,7 +53,7 @@
             </div>
           </div>
 
-          <div class="products__container">
+          <div class="products__container b">
             <div class="products__container--nav">
               <h3>MOUSES</h3>
               <h5>Ver Todo</h5>
@@ -57,7 +62,7 @@
             </div>
           </div>
 
-          <div class="products__container">
+          <div class="products__container b">
             <div class="products__container--nav">
               <h3>LAPTOPS</h3>
               <h5><a href="views/getProducts.html" class="hyperlink">Ver Todo</a> </h5>
@@ -66,7 +71,7 @@
             </div>
           </div>
 
-          <div class="products__container">
+          <div class="products__container b">
             <div class="products__container--nav">
               <h3>MONITORES</h3>
               <h5><a href="views/getProducts.html" class="hyperlink">Ver Todo</a> </h5>
@@ -131,8 +136,10 @@
         </div>
       </section>
     </div>
-<script src="assets/js/index.js"></script>
-    <script type="module" src="controllers/getProducts.controller.js"></script>
+    <script src="assets/js/index.js"></script>
+    <script src="assets/js/isLogged.js"></script>
+    <script type="module" src="controllers/getProductsbyCategory.controller.js"></script>
+    <script type="module" src="controllers/getProductSearched.controller.js"></script>
 
   </body>
 </html>
