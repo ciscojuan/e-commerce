@@ -1,0 +1,61 @@
+.products {
+  .container__addProduct {
+    width: 100%;
+    height: 100;
+    padding: 2rem 0;
+
+    .products__form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      grid-gap: 2rem;
+
+      .fieldset{
+        width: 40%;
+      }
+
+      .input__product {
+        width: 40%;
+        height: 2.5rem;
+        padding-left: 15px;
+        border: none;
+        border-bottom: 2px solid #ccc;
+        background-color: transparent;
+        outline: none;
+        margin-bottom: 20px;
+        position: relative;
+      }
+
+      .input__product:focus{
+        outline: none;
+        border-bottom: 2px solid #555;
+      }
+
+      .input__product.form-input:focus::placeholder{
+        transform: translateY(-40px);
+        font-size: 14px;
+        color: #ccc;
+        transition: transform 0.2s ease-in-out,
+        font-size 0.2s ease-in-out, color 0.2s ease-in-out;
+      }
+      .input__product--resume{
+        width: 40%;
+        height: 5rem;
+        border: 2px solid #ccc;
+        outline: none;
+      }
+      .btn__send{
+        width: 40%;
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+
+  .form-input:focus {
+    outline: none;
+    border-bottom: 2px solid #555;
+  }
+ 
+

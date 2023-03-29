@@ -1,0 +1,132 @@
+.product {
+  margin-top: 2rem;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+
+  &__container {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 100%;
+    justify-content: center;
+    align-items: center;
+
+    &--title {
+      text-align: center;
+      font-size: 3rem;
+    }
+    &--body {
+      width: 80%;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 40% 60%;
+      justify-content: center;
+      align-items: center;
+      margin: 0 auto;
+    
+
+      .product-image {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        overflow: hidden;
+        img {
+            width: 80%  ;
+
+        }
+      }
+      .product-description {
+        height: 100%;
+        p {
+          font-size: 2rem;
+          padding: 1rem;
+        }
+      }
+    }
+  }
+  
+  .divider{
+    margin-top:2rem;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto;
+    &--title{
+      font-size: 30px;
+    }
+    &--separator{
+      flex: 1;
+      border-top: 1px solid #ddd;
+    }
+  }
+  &__related {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    transition: all 0.3s ease;
+    margin: 2rem;
+
+    .product {
+      width: 300px;
+      height: 400px;
+      display: flex;
+      background-color: #fff;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      border: 2px solid #ccc;
+      border-radius: 10px;
+
+      box-shadow: 1px 1px 15px rgba(123, 121, 123, 0.733);
+      .product__container--thumbnail{
+        width: 250px;
+        height: 250px;
+        overflow: hidden;
+        .product__thumbnail {
+          /* background: linear-gradient(rgba(5, 7, 12, .75), rgba(5, 7, 12, .75)) */
+          width: 250px;
+          height: 200px;
+          object-fit: cover;
+          border-radius: 10px;
+          transition: transform 1s;
+        }
+      }
+      .product__thumbnail:hover{
+        transform: scale(1.2);
+      }
+
+      .product__details {
+        font-size: 1.3rem;
+        text-align: center;
+        .btn-showProduct {
+          width: 80%;
+          margin: 0 auto;
+          border: 2px solid #ccc;
+          padding: 5px;
+          .anchor {
+            text-decoration: none;
+            color: black;
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 720px) {
+  .product{
+    &__container{
+/*       margin-bottom: 2rem; */
+      .product__container--body{
+        grid-template-columns: 100%;
+        height: 100%;
+      }
+    }
+  }
+}

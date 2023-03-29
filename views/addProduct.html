@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>AluraGeeks</title>
+  </head>
+  <body>
+    <div class="container">
+      <section class="header">
+        <div class="header__logo"></div>
+        <div class="header__search">
+          <input
+            type="search"
+            name="search"
+            placeholder="Search"
+            class="header__search--input"
+          />
+          <i class="fas fa-search"></i>
+        </div>
+        <div class="header__login">
+          <button class="header__login--button">login</button>
+        </div>
+      </section>
+      <section class="gallery">
+        <div class="gallery__banner"></div>
+        <div class="gallery__info">
+          <h3 class="gallery--text">Febrero Promocional</h3>
+          <h4 class="gallery--text">
+            Productos Seleccionados con 33% de descuento
+          </h4>
+
+          <button class="gallery__info--button">Ver Productos</button>
+        </div>
+      </section>
+      <section class="products">
+        
+        <div class="container__addProduct">
+          <form action="" class="products__form" data-form>
+            <div class="fieldset"><h1>Agregar Nuevo  Producto</h1></div>
+            <input type="url"  name="url" class="input__product" placeholder="URL de la imagen" data-validation="url" data-validation-help="Proporcionanos la url de la imagen" data-validation="required" data-thumbnail autocomplete="url">
+            <input type="text" name="category"  class="input__product" placeholder="Categoria" data-validation-help="A que categoria pertenece el producto" data-category autocomplete="category">
+            <input type="text" name="name"  class="input__product" placeholder="Nombre del Producto" data-validation-help="¿Qué nombre va a tener el producto?" data-validation="required" data-name autocomplete="name">
+            <input type="text" name="price"  class="input__product" placeholder="Precio del Producto" data-validation-help="Dale un precio al producto" data-validation="required" data-price autocomplete="price">
+
+            <textarea name="" name="description" id="resume-product" class="input__product--resume" placeholder="Descripcion del producto" data-validation-help="Escribe una descripcion para el producto" data-description autocomplete="description"></textarea>
+
+            <button type="submit" class="btn__send">Agregar Producto</button>
+          </form>
+        </div>
+
+
+
+      </section>
+
+      <section class="about">
+        <div class="about__container">
+          <div class="about__brand">
+            <img src="../assets/images/logo.svg" alt="AluraGeeks" />
+            <img src="../assets/images/alura.svg" alt="AluraGeeks" />
+            <img src="../assets/images/geek.svg" alt="AluraGeeks" />
+          </div>
+          <ul class="nav--menu">
+            <li class="nav--link">
+              <a href="#" class="anchor">Quienes Somos</a>
+            </li>
+            <li class="nav--link">
+              <a href="#" class="anchor">Politica de Privacidad</a>
+            </li>
+            <li class="nav--link">
+              <a href="#" class="anchor">Programa de Filidad</a>
+            </li>
+            <li class="nav--link">
+              <a href="#" class="anchor">Nuestras Tiendas</a>
+            </li>
+            <li class="nav--link">
+              <a href="#" class="anchor">Quiero ser Benediciado</a>
+            </li>
+            <li class="nav--link">
+              <a href="#" class="anchor">Anuncie Aqui</a>
+            </li>
+          </ul>
+          <div class="about__contact">
+            <input
+              type="text"
+              class="nombre--input"
+              placeholder="Escribe tu nombre"
+              pattern="[a-z]*"
+            />
+
+            <input type="text-area""
+              class="decripcion--input"
+              placeholder="Escribre un mensaje"
+            >
+            <button class="send">Enviar</button>
+          </div>
+        </div>
+      </section>
+      <section class="footer">
+        <div class="footer__container">
+          <p class="footer--text">Desarrollado por COD_</p>
+          <p class="footer--text">2023</p>
+        </div>
+      </section>
+    </div>
+    <script src="../assets/js/index.js"></script>
+    <script type="module" src="../controllers/addProduct.controller.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> <!-- Sweet Alert-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/uuid/8.3.2/uuid.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <script>
+      $.validate({
+        lang: 'es'
+      });
+
+    </script>
+  </body>
+</html>

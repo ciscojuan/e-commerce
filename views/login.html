@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <title>AluraGeeks</title>
+</head>
+<body>
+    <div class="container">
+        <section class="header">
+          <div class="header__logo"></div>
+          <div class="header__search">
+            <input
+              type="search"
+              name="search"
+              placeholder="Search"
+              class="header__search--input"
+            />
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="header__login">
+            <button class="header__login--button" data-login> <a href="/views/login.html">Log In</a></button>
+          <button class="header__login--button out" data-logout>Log Out</a></button>
+          </div>
+        </section>
+        <section class="gallery">
+            <div class="gallery__banner">
+                <div class="container__login">
+                  <div class="login__title">Zona de Ingreso</div>
+                <input type="text" class="input-login" placeholder="Usuario" data-username>
+                <input type="password" class="input-login" placeholder="Contraseña" data-password>
+                <button class="gallery__info--button btn-login">Ingresar</button>
+                </div>
+            </div>
+
+        </section>
+        <section class="about">
+          <div class="about__container">
+            <div class="about__brand">
+              <img src="/assets/images/logo.svg" alt="AluraGeeks" />
+              <img src="/assets/images/alura.svg" alt="AluraGeeks" />
+              <img src="/assets/images/geek.svg" alt="AluraGeeks" />
+            </div>
+            <ul class="nav--menu">
+              <li class="nav--link">
+                <a href="#" class="anchor">Quienes Somos</a>
+              </li>
+              <li class="nav--link">
+                <a href="#" class="anchor">Politica de Privacidad</a>
+              </li>
+              <li class="nav--link">
+                <a href="#" class="anchor">Programa de Filidad</a>
+              </li>
+              <li class="nav--link">
+                <a href="#" class="anchor">Nuestras Tiendas</a>
+              </li>
+              <li class="nav--link">
+                <a href="#" class="anchor">Quiero ser Benediciado</a>
+              </li>
+              <li class="nav--link">
+                <a href="#" class="anchor">Anuncie Aqui</a>
+              </li>
+            </ul>
+            <div class="about__contact">
+              <input
+                type="text"
+                class="nombre--input"
+                placeholder="Escribe tu nombre"
+                pattern="[a-z]*"
+              />
+  
+              <input type="text-area""
+                class="decripcion--input"
+                placeholder="Escribre un mensaje"
+              >
+              <button class="send">Enviar</button>
+            </div>
+          </div>
+        </section>
+        
+        <section class="footer">
+          <div class="footer__container">
+            <p class="footer--text">Desarrollado por COD_</p>
+            <p class="footer--text">2023</p>
+          </div>
+        </section>
+      </div>
+      <script src="../assets/js/index.js"></script>
+</body>
+</html>
