@@ -5,7 +5,7 @@ var input = document.querySelector("[data-string]");
 var resultado = document.querySelector("[data-search]");
 
 var data;
-fetch("http://localhost:3001/products")
+fetch(productServices.jsonurl)
   .then((response) => response.json())
   .then((json) => (data = json));
 

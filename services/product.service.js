@@ -74,4 +74,5 @@ export const productServices = {
   getProductRelated,
   addProduct,
   deleteProduct,
+  jsonurl
 };
