@@ -52,7 +52,7 @@ const addProduct = (thumbnail, category, name,  price, description) =>{
   return fetch(`${jsonurl}/products`,{
     method: 'POST',
     headers: {
-      'Content-Type': 'application/json',
+      'Content-Type': 'application/json', 
     },
     body: JSON.stringify({  thumbnail, category, name, price, description, id : uuid.v4() }),
   });
