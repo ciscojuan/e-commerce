@@ -14,7 +14,7 @@ const getProducts = () =>
 //getMouses
 
 const getLaptop = () =>
-  fetch("https://github.com/ciscojuan/e-commerce/blob/main/assets/product.json?category_like=LAPTOP").then((res) =>
+  fetch("https://raw.githubusercontent.com/ciscojuan/e-commerce/main/assets/product.json?category_like=LAPTOP").then((res) =>
     res.json()
   );
 
