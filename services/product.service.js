@@ -14,7 +14,7 @@ const getProducts = () =>
 //getMouses
 
 const getLaptop = () =>
-  fetch(`${jsonurl}category_like=LAPTOP`).then((res) =>
+  fetch(`${jsonurl}?category_like=LAPTOP`).then((res) =>
     res.json()
   );
 
