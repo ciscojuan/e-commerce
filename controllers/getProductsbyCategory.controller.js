@@ -28,7 +28,7 @@ const newProduct = (name, thumbnail, price, id, category) => {
 productServices.getKeyboards().then((data) => {
   data.forEach((product) => {
     const newProducto = newProduct(
-      product.name,
+      product.name,   
       product.thumbnail,
       product.price,
       product.id,

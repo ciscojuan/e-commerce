@@ -1,5 +1,5 @@
 "use strict";
-const jsonurl = 'https://raw.githubusercontent.com/ciscojuan/e-commerce/main/assets/product.json';
+const jsonurl = 'https://juan-e-commerce-api.onrender.com/products';
 const urlSearchParams = new URLSearchParams(window.location.search);
 const id = urlSearchParams.get("id");
 const category = urlSearchParams.get('category');
@@ -14,7 +14,7 @@ const getProducts = () =>
 //getMouses
 
 const getLaptop = () =>
-  fetch("https://raw.githubusercontent.com/ciscojuan/e-commerce/main/assets/product.json?category_like=LAPTOP").then((res) =>
+  fetch(`${jsonurl}category_like=LAPTOP`).then((res) =>
     res.json()
   );
 
