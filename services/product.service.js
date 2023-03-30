@@ -1,5 +1,5 @@
 "use strict";
-
+const jsonurl = 'https://raw.githubusercontent.com/ciscojuan/e-commerce/main/assets/product.json';
 const urlSearchParams = new URLSearchParams(window.location.search);
 const id = urlSearchParams.get("id");
 const category = urlSearchParams.get('category');
@@ -7,7 +7,7 @@ const category = urlSearchParams.get('category');
 
 
 const getProducts = () =>
-  fetch("http://localhost:3001/products").then((res) => res.json());
+  fetch(jsonurl).then((res) => res.json());
 
 
 
@@ -20,36 +20,36 @@ const getLaptop = () =>
 
 //getKeyboars
 const getKeyboards = () =>
-  fetch("http://localhost:3001/products?category_like=TECLADO").then((res) =>
+  fetch(`${jsonurl}?category_like=TECLADO`).then((res) =>
     res.json()
   );
 
 //getMonitor
 
 const getMonitor = () =>
-  fetch("http://localhost:3001/products?category_like=MONITOR").then((res) =>
+  fetch(`${jsonurl}?category_like=MONITOR`).then((res) =>
     res.json()
   );
 
 //getMouses
 const getMouse = () =>
-  fetch("http://localhost:3001/products?category_like=MOUSE").then((res) =>
+  fetch(`${jsonurl}?category_like=MOUSE`).then((res) =>
     res.json()
   );
 
   //getProduct
 const getProduct = () =>
-  fetch("http://localhost:3001/products/" + id).then((res) => res.json())
+  fetch(`${jsonurl}/ + id`).then((res) => res.json())
 
 
 
 //getProductsRealted
 const getProductRelated = () => 
-  fetch("http://localhost:3001/products?category_like="+ category).then(res => res.json()).catch(err => console.log(err))
+  fetch(`${jsonurl}?category_like=${category}`).then(res => res.json()).catch(err => console.log(err))
       
 //addProduct
 const addProduct = (thumbnail, category, name,  price, description) =>{
-  return fetch('http://localhost:3001/products',{
+  return fetch(`http://localhost:3001/products`,{
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
