@@ -182,10 +182,9 @@
 .product__container {
   width: 80%;
   height: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
   gap: 30px;
   padding: 0 2rem;
   margin: 0 auto;
@@ -248,6 +247,56 @@
   color: black;
 }
 
+@media screen and (max-width: 1600px) {
+  .product__container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .product__container .product {
+    width: 250px;
+  }
+  .product__container .product .product__container--thumbnail {
+    width: 200px;
+    height: 200px;
+  }
+  .product__container .product .product__container--thumbnail img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .product__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 1024px) {
+  .product__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .product__container .product {
+    width: 250px;
+  }
+  .product__container .product .product__container--thumbnail {
+    width: 200px;
+    height: 200px;
+  }
+  .product__container .product .product__container--thumbnail img {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .product__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 480px) {
+  .product__container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
 .container .gallery .gallery__banner {
   display: flex;
   align-items: center;
@@ -281,6 +330,17 @@
   margin-left: 0;
 }
 
+@media screen and (max-width: 480px) {
+  .container .gallery .gallery__banner .container__login {
+    height: 250px;
+  }
+  .container .gallery .gallery__banner .gallery__info--button {
+    font-size: 1rem;
+  }
+  .nav--menu {
+    display: none;
+  }
+}
 .header {
   width: 100%;
   height: 5rem;
@@ -413,6 +473,12 @@
   margin-bottom: 10px;
 }
 
+@media screen and (max-width: 1024px) {
+  .gallery__info {
+    width: 80%;
+    height: 20rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .gallery__info {
     left: 49%;
@@ -529,7 +595,11 @@
   text-decoration: none;
   color: black;
 }
-.products .main__container .product {
+.products .main__container .busqueda {
+  width: 100%;
+  display: none;
+}
+.products .main__container .busqueda .product {
   width: 300px;
   height: 400px;
   display: flex;
@@ -541,12 +611,12 @@
   border-radius: 10px;
   box-shadow: 1px 1px 15px rgba(123, 121, 123, 0.733);
 }
-.products .main__container .product .product__container--thumbnail {
+.products .main__container .busqueda .product .product__container--thumbnail {
   width: 250px;
   height: 200px;
   overflow: hidden;
 }
-.products .main__container .product .product__container--thumbnail .product__thumbnail {
+.products .main__container .busqueda .product .product__container--thumbnail .product__thumbnail {
   width: 250px;
   height: 200px;
   -o-object-fit: cover;
@@ -554,20 +624,20 @@
   border-radius: 10px;
   transition: all 1s;
 }
-.products .main__container .product .product__container--thumbnail .product__thumbnail:hover {
+.products .main__container .busqueda .product .product__container--thumbnail .product__thumbnail:hover {
   transform: scale(1.2);
 }
-.products .main__container .product .product__details {
+.products .main__container .busqueda .product .product__details {
   font-size: 1.3rem;
   text-align: center;
 }
-.products .main__container .product .product__details .btn-showProduct {
+.products .main__container .busqueda .product .product__details .btn-showProduct {
   width: 80%;
   margin: 0 auto;
   border: 2px solid #ccc;
   padding: 5px;
 }
-.products .main__container .product .product__details .btn-showProduct .anchor {
+.products .main__container .busqueda .product .product__details .btn-showProduct .anchor {
   text-decoration: none;
   color: black;
 }
@@ -680,18 +750,19 @@
   }
   .products .main__container .products__container .row__container--products {
     display: grid;
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr;
+    justify-items: center;
   }
   .products .main__container .products__container .row__container--products .product {
-    width: 200px;
-    height: 300px;
+    width: 300px;
+    height: 400px;
     display: flex;
     justify-content: space-around;
     flex-direction: column;
   }
   .products .main__container .products__container .row__container--products .product .product__thumbnail {
-    width: 150px;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     -o-object-fit: cover;
        object-fit: cover;
     border-radius: 10px;

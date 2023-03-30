@@ -2,14 +2,9 @@
 
 const urlSearchParams = new URLSearchParams(window.location.search);
 const id = urlSearchParams.get("id");
-const category = urlSearchParams.get('category')
+const category = urlSearchParams.get('category');
 
 
-
-const getProductSearch = () =>{
-  fetch("http://localhost:3001/products").then((res) => res.json());
-  
-}
 
 const getProducts = () =>
   fetch("http://localhost:3001/products").then((res) => res.json());
@@ -19,7 +14,7 @@ const getProducts = () =>
 //getMouses
 
 const getLaptop = () =>
-  fetch("http://localhost:3001/products?category_like=LAPTOP").then((res) =>
+  fetch("https://github.com/ciscojuan/e-commerce/blob/main/assets/product.json?category_like=LAPTOP").then((res) =>
     res.json()
   );
 
@@ -63,7 +58,7 @@ const addProduct = (thumbnail, category, name,  price, description) =>{
   });
 }
 
-/* deletProduct */
+/* deleteProduct */
 const deleteProduct = (id) =>{
   return fetch(`http://localhost:3001/products/${id}`,{
     method: 'DELETE',
@@ -77,7 +72,6 @@ export const productServices = {
   getMouse,
   getProduct,
   getProductRelated,
-  getProductSearch,
   addProduct,
   deleteProduct,
 };

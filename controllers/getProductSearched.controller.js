@@ -38,7 +38,9 @@ input.addEventListener("keyup", () => {
     for (var i = 0; i < elements.length; i++) {
       elements[i].style.display = "none";
     }
-  } else {
+    document.querySelector(".busqueda").style.display = "flex";
+  } else{
     resultado.innerHTML = `No hay resultados con ${value}`;
+    document.querySelector(".busqueda").style.display = "none";
   }
 });
