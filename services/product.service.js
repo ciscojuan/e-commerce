@@ -49,7 +49,7 @@ const getProductRelated = () =>
       
 //addProduct
 const addProduct = (thumbnail, category, name,  price, description) =>{
-  return fetch(`http://localhost:3001/products`,{
+  return fetch(`${jsonurl}/products`,{
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
