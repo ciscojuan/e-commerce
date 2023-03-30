@@ -60,7 +60,7 @@ const addProduct = (thumbnail, category, name,  price, description) =>{
 
 /* deleteProduct */
 const deleteProduct = (id) =>{
-  return fetch(`http://localhost:3001/products/${id}`,{
+  return fetch(`${jsonurl}/${id}`,{
     method: 'DELETE',
   })
 }
